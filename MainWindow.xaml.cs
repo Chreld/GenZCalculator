@@ -16,9 +16,52 @@ namespace MemeCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> equation = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void NumberButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                DisplayTextBox.Text += button.Content.ToString();
+            }
+        }
+
+        //private string CalculateEquation(string computation)
+        //{
+
+        //}
+
+        private void addition(string number)
+        {
+            equation.Add(number);
+            equation.Add(" + ");
+        }
+
+        private void subtraction(string number)
+        {
+            equation.Add(number);
+            equation.Add(" - ");
+        }
+
+        private void multiplication(string number)
+        {
+            equation.Add(number);
+            equation.Add(" * ");
+        }
+
+        private void division(string number)
+        {
+            equation.Add(number);
+            equation.Add(" / ");
+        }
+
+        private void Result (int result)
+        {
+
         }
     }
 }

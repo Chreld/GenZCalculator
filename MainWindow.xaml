@@ -6,30 +6,25 @@
         xmlns:local="clr-namespace:MemeCalculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="500">
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="218" Margin="74,54,0,0" TextWrapping="Wrap" Text="TEXT BLOCK" VerticalAlignment="Top" Width="319"/>
+    <Grid Margin="0,0,0,-6">
+        <TextBox HorizontalAlignment="Left" Height="70" Margin="74,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" FontSize="32" Name="DisplayTextBox"/>
 
-        <Button Content="7" HorizontalAlignment="Left" Margin="74,500,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="8" HorizontalAlignment="Left" Margin="148,500,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="9" HorizontalAlignment="Left" Margin="220,500,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-
-        <Button Content="4" HorizontalAlignment="Left" Margin="74,571,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="148,571,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="220,571,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-
-        <Button Content="1" HorizontalAlignment="Left" Margin="74,643,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="2" HorizontalAlignment="Left" Margin="148,643,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="3" HorizontalAlignment="Left" Margin="220,643,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-
-        <Button Content="0" HorizontalAlignment="Left" Margin="74,712,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="," HorizontalAlignment="Left" Margin="148,712,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="(-)" HorizontalAlignment="Left" Margin="220,712,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-
-        <Button Content="X" HorizontalAlignment="Left" Margin="343,500,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="-" HorizontalAlignment="Left" Margin="343,571,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="+" HorizontalAlignment="Left" Margin="343,643,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="Enter" HorizontalAlignment="Left" Margin="343,712,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="X" HorizontalAlignment="Left" Margin="343,500,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
-        <Button Content="%" HorizontalAlignment="Left" Margin="343,427,0,0" VerticalAlignment="Top" Width="50" Height="50"/>
+        <Button Content="7" HorizontalAlignment="Left" Margin="74,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="148,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="220,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="74,509,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="148,509,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="220,509,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="1" HorizontalAlignment="Left" Margin="74,581,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="2" HorizontalAlignment="Left" Margin="148,581,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="3" HorizontalAlignment="Left" Margin="220,581,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="74,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="," HorizontalAlignment="Left" Margin="148,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="(-)" HorizontalAlignment="Left" Margin="220,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="343,509,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="343,581,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="Enter" HorizontalAlignment="Left" Margin="343,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="343,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="%" HorizontalAlignment="Left" Margin="343,365,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="CalculateEquation"/>
     </Grid>
 </Window>
