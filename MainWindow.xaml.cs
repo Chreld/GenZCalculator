@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Data;
+using System.Linq.Expressions;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -30,38 +32,66 @@ namespace MemeCalculator
             }
         }
 
-        //private string CalculateEquation(string computation)
-        //{
+        private void CalculateEquationClick(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                CalculateMemeResponse(DisplayTextBox.Text);
+            }
+        }
 
-        //}
+        private void CalculateMemeResponse(string equation)
+        {
+            switch (equation)
+            {
+                case "9+10":
+                    DisplayTextBox.Text = "21";
+                    break;
+                case "LXIX":
+                    DisplayTextBox.Text = "Optime, amice ;)";
+                    break;
+                default:
+                    CalculateRealResponse(equation);
+                    break;
+            }
+        }
 
-        private void addition(string number)
+        private void CalculateRealResponse(string equation)
+        {
+            var result = new DataTable().Compute(equation, null);
+            switch (result)
+            {
+                case 69:
+                    DisplayTextBox.Text = "Nice";
+                    break;
+                default:
+                    DisplayTextBox.Text = "ey yo hold up that didn't make any sense";
+                    break;
+            }
+        }
+
+        private void Addition(string number)
         {
             equation.Add(number);
             equation.Add(" + ");
         }
 
-        private void subtraction(string number)
+        private void Subtraction(string number)
         {
             equation.Add(number);
             equation.Add(" - ");
         }
 
-        private void multiplication(string number)
+        private void Multiplication(string number)
         {
             equation.Add(number);
             equation.Add(" * ");
         }
 
-        private void division(string number)
+        private void Division(string number)
         {
             equation.Add(number);
             equation.Add(" / ");
-        }
-
-        private void Result (int result)
-        {
-
         }
     }
 }

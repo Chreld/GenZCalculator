@@ -21,10 +21,12 @@
         <Button Content="0" HorizontalAlignment="Left" Margin="74,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="," HorizontalAlignment="Left" Margin="148,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="(-)" HorizontalAlignment="Left" Margin="220,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+
+        <Button Content="%" HorizontalAlignment="Left" Margin="343,365,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="343,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="343,509,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="343,581,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
-        <Button Content="Enter" HorizontalAlignment="Left" Margin="343,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
-        <Button Content="X" HorizontalAlignment="Left" Margin="343,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
-        <Button Content="%" HorizontalAlignment="Left" Margin="343,365,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="CalculateEquation"/>
+
+        <Button Content="Enter" HorizontalAlignment="Left" Margin="343,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="CalculateEquationClick"/>
     </Grid>
 </Window>
