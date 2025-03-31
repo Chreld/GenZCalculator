@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="500">
     <Grid Margin="0,0,0,-6">
-        <TextBox HorizontalAlignment="Left" Height="70" Margin="74,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" FontSize="32" Name="DisplayTextBox"/>
+        <TextBox HorizontalAlignment="Left" Height="112" Margin="74,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" FontSize="21" Name="DisplayTextBox"/>
 
         <Button Content="7" HorizontalAlignment="Left" Margin="74,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="8" HorizontalAlignment="Left" Margin="148,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
@@ -22,8 +22,8 @@
         <Button Content="," HorizontalAlignment="Left" Margin="148,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="(-)" HorizontalAlignment="Left" Margin="220,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
 
-        <Button Content="%" HorizontalAlignment="Left" Margin="343,365,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
-        <Button Content="X" HorizontalAlignment="Left" Margin="343,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="/" HorizontalAlignment="Left" Margin="343,365,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
+        <Button Content="*" HorizontalAlignment="Left" Margin="343,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="343,509,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="343,581,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
 
