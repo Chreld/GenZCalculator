@@ -30,7 +30,7 @@ namespace MemeCalculator
 
         private void CalculateMemeResponse(string equation)
         {
-            string equationTrimmedLowered = Regex.Replace(equation, @"[^a-zA-Z0-9]", "").Trim().ToLower();
+            string equationTrimmedLowered = Regex.Replace(equation, @"[^a-zA-Z0-9/*+\-()]", "").Trim().ToLower();
             switch (equationTrimmedLowered)
             {
                 case "1+1":
