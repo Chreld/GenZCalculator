@@ -1,26 +1,11 @@
 ﻿using System.Data;
-using System.Linq.Expressions;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace MemeCalculator
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        private List<string> equation = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
@@ -53,6 +38,9 @@ namespace MemeCalculator
                 case "2+2":
                     DisplayTextBox.Text = "Oh we are taking it safe today, aren't we?";
                     break;
+                case "4+4":
+                    DisplayTextBox.Text = "Daring today?";
+                    break;
                 case "6+7":
                     DisplayTextBox.Text = "If 7+7 is 14, then one lower would be 13";
                     break;
@@ -68,7 +56,12 @@ namespace MemeCalculator
                 case "fuckyou":
                     DisplayTextBox.Text = "Look at the maidenless, who got beef with a calculator. Touch grass";
                     break;
-                case "Whyis6afraidof7"
+                case "whyis6afraidof7":
+                    DisplayTextBox.Text = "Because 7 8 9";
+                    break;
+                case "whoneedtheynumbussyate":
+                    DisplayTextBox.Text = "Omg me";
+                    break;
                 default:
                     CalculateRealResponse(equation);
                     break;
@@ -82,6 +75,9 @@ namespace MemeCalculator
             {
                 case 13:
                     DisplayTextBox.Text = "Unlucky 13";
+                    break;
+                case 42:
+                    DisplayTextBox.Text = "The answer to life, the universe, and everything";
                     break;
                 case 69:
                     DisplayTextBox.Text = "Nice";
@@ -99,30 +95,6 @@ namespace MemeCalculator
                     DisplayTextBox.Text = "ey yo hold up that didn't make any sense. Try again.";
                     break;
             }
-        }
-
-        private void Addition(string number)
-        {
-            equation.Add(number);
-            equation.Add(" + ");
-        }
-
-        private void Subtraction(string number)
-        {
-            equation.Add(number);
-            equation.Add(" - ");
-        }
-
-        private void Multiplication(string number)
-        {
-            equation.Add(number);
-            equation.Add(" * ");
-        }
-
-        private void Division(string number)
-        {
-            equation.Add(number);
-            equation.Add(" / ");
         }
     }
 }
