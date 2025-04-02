@@ -40,7 +40,7 @@ namespace MemeCalculator
                     DisplayTextBox.Text = "Oh we are taking it safe today, aren't we?";
                     break;
                 case "4+4":
-                    DisplayTextBox.Text = "Daring today?";
+                    DisplayTextBox.Text = "Double checking everything today?";
                     break;
                 case "6+7":
                     DisplayTextBox.Text = "If 7+7 is 14, then one lower would be 13";
@@ -48,7 +48,7 @@ namespace MemeCalculator
                 case "9+10":
                     DisplayTextBox.Text = "21";
                     break;
-                case "LXIX":
+                case "lxix":
                     DisplayTextBox.Text = "Optime, amice ;)";
                     break;
                 case "7+(-1/2+5)*20":
@@ -71,30 +71,37 @@ namespace MemeCalculator
 
         private void CalculateRealResponse(string equation)
         {
-            var result = new DataTable().Compute(equation, null);
-            switch (result)
+            if (Regex.IsMatch(equation, @"[\d/*+\-()]"))
             {
-                case 13:
-                    DisplayTextBox.Text = "Unlucky 13";
-                    break;
-                case 42:
-                    DisplayTextBox.Text = "The answer to life, the universe, and everything";
-                    break;
-                case 69:
-                    DisplayTextBox.Text = "Nice";
-                    break;
-                case 420:
-                    DisplayTextBox.Text = "Grow up";
-                    break;
-                case 666:
-                    DisplayTextBox.Text = "Hello demons, it's me, ya boy";
-                    break;
-                case 911:
-                    DisplayTextBox.Text = "911, what's your emergency?";
-                    break;
-                default:
-                    DisplayTextBox.Text = "ey yo hold up that didn't make any sense. Try again.";
-                    break;
+                var result = new DataTable().Compute(equation, null);
+                switch (result)
+                {
+                    case 13:
+                        DisplayTextBox.Text = "Unlucky 13";
+                        break;
+                    case 42:
+                        DisplayTextBox.Text = "The answer to life, the universe, and everything";
+                        break;
+                    case 69:
+                        DisplayTextBox.Text = "Nice";
+                        break;
+                    case 420:
+                        DisplayTextBox.Text = "Grow up";
+                        break;
+                    case 666:
+                        DisplayTextBox.Text = "Hello demons, it's me, ya boy";
+                        break;
+                    case 911:
+                        DisplayTextBox.Text = "911, what's your emergency?";
+                        break;
+                    default:
+                        DisplayTextBox.Text = result.ToString();
+                        break;
+                }
+            }
+            else
+            {
+                DisplayTextBox.Text = "ey yo hold up that didn't make any sense. Try again.";
             }
         }
     }
