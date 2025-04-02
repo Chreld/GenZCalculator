@@ -7,8 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="500">
     <Grid Margin="0,0,0,-6">
-        <TextBox HorizontalAlignment="Left" Height="112" Margin="74,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" FontSize="21" Name="DisplayTextBox"/>
+        
+        <!-- Calculator display -->
+        <TextBox x:Name="DisplayTextBox"
+             HorizontalAlignment="Left"
+             Height="112"
+             Margin="74,148,0,0"
+             TextWrapping="Wrap"
+             VerticalAlignment="Top"
+             Width="319"
+             FontSize="21"
+             Foreground="LimeGreen"
+             Background="Black"
+             BorderThickness="0"
+             Padding="5"
+             TextAlignment="Left"/>
 
+        <!-- Calculator number buttons -->
         <Button Content="7" HorizontalAlignment="Left" Margin="74,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="8" HorizontalAlignment="Left" Margin="148,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="9" HorizontalAlignment="Left" Margin="220,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
@@ -22,11 +37,13 @@
         <Button Content="," HorizontalAlignment="Left" Margin="148,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="(-)" HorizontalAlignment="Left" Margin="220,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
 
+        <!-- Calculator arithmetic operators buttons -->
         <Button Content="/" HorizontalAlignment="Left" Margin="343,365,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="*" HorizontalAlignment="Left" Margin="343,438,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="343,509,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="343,581,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="NumberButtonClick"/>
 
+        <!-- Submit button -->
         <Button Content="Enter" HorizontalAlignment="Left" Margin="343,650,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="CalculateEquationClick"/>
     </Grid>
 </Window>
