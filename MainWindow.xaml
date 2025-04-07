@@ -21,7 +21,8 @@
             Foreground="LimeGreen"
             Background="Black"
             Padding="5"
-            TextAlignment="Right"/>
+            TextAlignment="Right"
+            FontFamily="Press Start 2P"/>
 
         <TextBox x:Name="DisplayTextBox"
              HorizontalAlignment="Left"
@@ -30,12 +31,13 @@
              TextWrapping="Wrap"
              VerticalAlignment="Top"
              Width="319"
-             FontSize="21"
+             FontSize="16"
              Foreground="LimeGreen"
              Background="Black"
              BorderThickness="0"
              Padding="5"
-             TextAlignment="Right"/>
+             TextAlignment="Right"
+             FontFamily="Press Start 2P"/>
 
         <!-- Calculator number buttons -->
         <Button Content="C" Margin="148,365,0,0" Click="ClearDisplayCurrent"/>
@@ -61,7 +63,7 @@
         <Button Content="+" Margin="343,581,0,0" Click="NumberButtonClick"/>
 
         <!-- Submit button -->
-        <Button Content="Enter" Margin="331,650,0,0" Click="CalculateEquationClick" RenderTransformOrigin="0.5,0.5" Width="75">
+        <Button Content="Enter" Margin="331,650,0,0" Click="CalculateEquationClick" RenderTransformOrigin="0.5,0.5" Width="75" FontSize="11">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -84,8 +86,10 @@
             <Setter Property="Foreground" Value="Green"/>
             <Setter Property="Background" Value="DarkSlateGray"/>
 
-            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontSize" Value="15"/>
             <Setter Property="Padding" Value="10"/>
+
+            <Setter Property="FontFamily" Value="Press Start 2P"/>
         </Style>
     </Window.Resources>
 </Window>

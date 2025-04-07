@@ -66,8 +66,14 @@ namespace MemeCalculator
                 case "7+(-1/2+5)*20":
                     DisplayTextBox.Text = "Seven-and-a-half-fives. Or 97 if you don't have a potato in your mouth";
                     break;
+                case "77+33":
+                    DisplayTextBox.Text = "100";
+                    break;
                 case "fuckyou":
                     DisplayTextBox.Text = "Look at the maidenless, who got beef with a calculator. Touch grass";
+                    break;
+                case "shrek":
+                    DisplayTextBox.Text = "Shrek is love, Shrek is life";
                     break;
                 case "whyis6afraidof7":
                     DisplayTextBox.Text = "Because 7 8 9";
@@ -84,19 +90,25 @@ namespace MemeCalculator
 
         private string CalculateRealResponse(string equation)
         {
-            if (Regex.IsMatch(equation, @"[\d/*+\-().,]"))
+            try
             {
                 var result = new DataTable().Compute(equation, null);
                 switch (result)
                 {
                     case 13:
-                        DisplayTextBox.Text = "Unlucky 13";
+                        DisplayTextBox.Text = "Ouch, unlucky";
                         break;
                     case 42:
                         DisplayTextBox.Text = "The answer to life, the universe, and everything";
                         break;
                     case 69:
                         DisplayTextBox.Text = "Nice";
+                        break;
+                    case 333:
+                        DisplayTextBox.Text = "Only half as scary as 666";
+                        break;
+                    case 360:
+                        DisplayTextBox.Text = "360 NO SCOPE!";
                         break;
                     case 420:
                         DisplayTextBox.Text = "Grow up";
@@ -107,13 +119,25 @@ namespace MemeCalculator
                     case 911:
                         DisplayTextBox.Text = "911, what's your emergency?";
                         break;
+                    case 1111:
+                        DisplayTextBox.Text = "Eleventeenth eleventy one";
+                        break;
+                    case 1337:
+                        DisplayTextBox.Text = "Leet";
+                        break;
+                    case 80085:
+                        DisplayTextBox.Text = "BOOBS";
+                        break;
+                    case 8008135:
+                        DisplayTextBox.Text = "BOOBIES";
+                        break;
                     default:
                         DisplayTextBox.Text = result.ToString();
                         break;
                 }
                 return equation;
             }
-            else
+            catch
             {
                 DisplayTextBox.Text = "ey yo hold up that didn't make any sense. Try again.";
                 return equation;
