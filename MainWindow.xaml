@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemeCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="500">
+        Title="Gen-Z Calculator" Height="800" Width="500">
     <Grid Margin="0,0,0,0" Background="DarkGray">
 
         <!-- Calculator display -->
@@ -18,7 +18,7 @@
             TextWrapping="Wrap"
             VerticalAlignment="Top"
             Width="319"
-            FontSize="21"
+            FontSize="11"
             Foreground="LimeGreen"
             Background="Black"
             Padding="5"
@@ -52,8 +52,8 @@
         <Button Content="2" Margin="148,581,0,0" Click="NumberButtonClick"/>
         <Button Content="3" Margin="220,581,0,0" Click="NumberButtonClick"/>
         <Button Content="0" Margin="74,650,0,0" Click="NumberButtonClick"/>
-        <Button Content="," Margin="148,650,0,0" Click="NumberButtonClick"/>
-        <Button Content="(-)" Margin="220,650,0,0" Click="NumberButtonClick"/>
+        <Button Content="." Margin="148,650,0,0" Click="NumberButtonClick"/>
+        <!--<Button Content="(-)" Margin="220,650,0,0" Click="NumberButtonClick"/>-->
 
         <!-- Calculator arithmetic operators buttons -->
         <Button Content="/" Margin="343,365,0,0" Click="NumberButtonClick"/>

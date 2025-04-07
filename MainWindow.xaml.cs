@@ -42,7 +42,7 @@ namespace MemeCalculator
 
         private string CalculateMemeResponse(string equation)
         {
-            string equationTrimmedLowered = Regex.Replace(equation, @"[^a-zA-Z0-9/*+\-()]", "").Trim().ToLower();
+            string equationTrimmedLowered = Regex.Replace(equation, @"[^a-zA-Z0-9/*+\-(),.]", "").Trim().ToLower();
             switch (equationTrimmedLowered)
             {
                 case "1+1":
@@ -84,7 +84,7 @@ namespace MemeCalculator
 
         private string CalculateRealResponse(string equation)
         {
-            if (Regex.IsMatch(equation, @"[\d/*+\-()]"))
+            if (Regex.IsMatch(equation, @"[\d/*+\-().,]"))
             {
                 var result = new DataTable().Compute(equation, null);
                 switch (result)
