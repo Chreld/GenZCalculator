@@ -35,8 +35,11 @@ namespace MemeCalculator
         {
             if (sender is Button button)
             {
-                var equation = CalculateMemeResponse(DisplayTextBox.Text);
-                DisplayTextHistory.Text = $"{equation} = {DisplayTextBox.Text}";
+                var userInput = DisplayTextBox.Text;
+
+                CalculateMemeResponse(DisplayTextBox.Text);
+
+                DisplayTextHistory.Text = $"{userInput} = {DisplayTextBox.Text}";
             }
         }
 

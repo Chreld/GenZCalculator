@@ -87,7 +87,7 @@
             <Setter Property="Width" Value="50"/>
             <Setter Property="Height" Value="50"/>
 
-            <Setter Property="Foreground" Value="Green"/>
+            <Setter Property="Foreground" Value="LimeGreen"/>
             <Setter Property="Background" Value="DarkSlateGray"/>
 
             <Setter Property="FontSize" Value="15"/>
