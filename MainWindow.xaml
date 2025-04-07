@@ -9,6 +9,21 @@
     <Grid Margin="0,0,0,0" Background="DarkGray">
 
         <!-- Calculator display -->
+        <Rectangle HorizontalAlignment="Left" Height="51" Margin="74,97,0,0" Stroke="Black" VerticalAlignment="Top" Width="319" Fill="Black"/>
+
+        <TextBlock x:Name="DisplayTextHistory"
+            HorizontalAlignment="Left" 
+            Height="36"
+            Margin="74,97,0,0" 
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="319"
+            FontSize="21"
+            Foreground="LimeGreen"
+            Background="Black"
+            Padding="5"
+            TextAlignment="Right"/>
+
         <TextBox x:Name="DisplayTextBox"
              HorizontalAlignment="Left"
              Height="112"
@@ -21,10 +36,11 @@
              Background="Black"
              BorderThickness="0"
              Padding="5"
-             TextAlignment="Left"/>
+             TextAlignment="Right"/>
 
         <!-- Calculator number buttons -->
-        <Button Content="CE" Margin="220,365,0,0" Click="ClearDisplay"/>
+        <Button Content="C" Margin="148,365,0,0" Click="ClearDisplayCurrent"/>
+        <Button Content="CE" Margin="220,365,0,0" Click="ClearDisplayEverything"/>
 
         <Button Content="7" Margin="74,438,0,0" Click="NumberButtonClick"/>
         <Button Content="8" Margin="148,438,0,0" Click="NumberButtonClick"/>

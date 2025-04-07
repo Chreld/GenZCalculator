@@ -12,9 +12,15 @@ namespace MemeCalculator
             InitializeComponent();
         }
 
-        private void ClearDisplay(object sender, RoutedEventArgs e)
+        private void ClearDisplayCurrent(object sender, RoutedEventArgs e)
         {
             DisplayTextBox.Text = string.Empty;
+        }
+
+        private void ClearDisplayEverything(object sender, RoutedEventArgs e)
+        {
+            DisplayTextBox.Text = string.Empty;
+            DisplayTextHistory.Text = string.Empty;
         }
 
         private void NumberButtonClick(object sender, RoutedEventArgs e)
@@ -29,11 +35,12 @@ namespace MemeCalculator
         {
             if (sender is Button button)
             {
-                CalculateMemeResponse(DisplayTextBox.Text);
+                var equation = CalculateMemeResponse(DisplayTextBox.Text);
+                DisplayTextHistory.Text = $"{equation} = {DisplayTextBox.Text}";
             }
         }
 
-        private void CalculateMemeResponse(string equation)
+        private string CalculateMemeResponse(string equation)
         {
             string equationTrimmedLowered = Regex.Replace(equation, @"[^a-zA-Z0-9/*+\-()]", "").Trim().ToLower();
             switch (equationTrimmedLowered)
@@ -72,9 +79,10 @@ namespace MemeCalculator
                     CalculateRealResponse(equation);
                     break;
             }
+            return equationTrimmedLowered;
         }
 
-        private void CalculateRealResponse(string equation)
+        private string CalculateRealResponse(string equation)
         {
             if (Regex.IsMatch(equation, @"[\d/*+\-()]"))
             {
@@ -103,10 +111,12 @@ namespace MemeCalculator
                         DisplayTextBox.Text = result.ToString();
                         break;
                 }
+                return equation;
             }
             else
             {
                 DisplayTextBox.Text = "ey yo hold up that didn't make any sense. Try again.";
+                return equation;
             }
         }
     }
