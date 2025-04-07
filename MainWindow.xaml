@@ -73,8 +73,12 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+
+        <!-- Copy Right Holder -->
+        <TextBlock HorizontalAlignment="Center" Height="30" Margin="0,734,0,0" TextWrapping="Wrap" Text="© 2025 Chreld" FontFamily="Press Start 2P" Foreground="Gray" VerticalAlignment="Top" Width="96"/>
     </Grid>
 
+    <!-- Button Styles -->
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Left"/>
