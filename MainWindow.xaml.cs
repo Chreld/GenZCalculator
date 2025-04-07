@@ -12,6 +12,11 @@ namespace MemeCalculator
             InitializeComponent();
         }
 
+        private void ClearDisplay(object sender, RoutedEventArgs e)
+        {
+            DisplayTextBox.Text = string.Empty;
+        }
+
         private void NumberButtonClick(object sender, RoutedEventArgs e)
         {
             if (sender is Button button)
