@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Gen-Z Calculator" Height="800" Width="500">
     <Grid Margin="0,0,0,0" Background="DarkGray">
+        <TextBlock HorizontalAlignment="Left" Height="65" Margin="90,27,0,0" TextWrapping="Wrap" Text="Gen-Z Calculator App" FontSize="20" FontFamily="Press Start 2P" Foreground="Gray" VerticalAlignment="Top" Width="294"/>
+
         <!-- Calculator display -->
         <Rectangle HorizontalAlignment="Left" Height="51" Margin="74,97,0,0" Stroke="Black" VerticalAlignment="Top" Width="319" Fill="Black"/>
 

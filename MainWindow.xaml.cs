@@ -43,11 +43,24 @@ namespace MemeCalculator
             }
         }
 
-        private string CalculateMemeResponse(string equation)
+        private async void TerminateSession()
+        {
+            MessageBox.Show("OH WE ARE NOT DESTROYING THE UNIVERSE TODAY, SESSION TERMINATED", "THE HELL YOU DOING?", MessageBoxButton.OK, MessageBoxImage.Warning);
+            Application.Current.Shutdown();
+        }
+
+        private void CalculateMemeResponse(string equation)
         {
             string equationTrimmedLowered = Regex.Replace(equation, @"[^a-zA-Z0-9/*+\-(),.]", "").Trim().ToLower();
             switch (equationTrimmedLowered)
             {
+                case "0/0":
+                    DisplayTextBox.Text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+                    TerminateSession();
+                    break;
+                case "1":
+                    DisplayTextBox.Text = "You're my number 1 ♥";
+                    break;
                 case "1+1":
                     DisplayTextBox.Text = "11";
                     break;
@@ -88,10 +101,9 @@ namespace MemeCalculator
                     CalculateRealResponse(equation);
                     break;
             }
-            return equationTrimmedLowered;
         }
 
-        private string CalculateRealResponse(string equation)
+        private void CalculateRealResponse(string equation)
         {
             try
             {
@@ -138,12 +150,10 @@ namespace MemeCalculator
                         DisplayTextBox.Text = result.ToString();
                         break;
                 }
-                return equation;
             }
             catch
             {
                 DisplayTextBox.Text = "ey yo hold up that didn't make any sense. Try again.";
-                return equation;
             }
         }
     }
