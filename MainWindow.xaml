@@ -7,39 +7,83 @@
         mc:Ignorable="d"
         Title="Gen-Z Calculator" Height="800" Width="500">
     <Grid Margin="0,0,0,0" Background="DarkGray">
-        <TextBlock HorizontalAlignment="Left" Height="65" Margin="90,27,0,0" TextWrapping="Wrap" Text="Gen-Z Calculator App" FontSize="20" FontFamily="Press Start 2P" Foreground="Gray" VerticalAlignment="Top" Width="294"/>
+        <TextBlock 
+            HorizontalAlignment="Left"
+            Height="24"
+            Margin="148,37,0,0"
+            TextWrapping="Wrap"
+            Text="Gen-Z Calculator"
+            FontSize="12"
+            FontFamily="Lucida Console"
+            Foreground="Gray"
+            VerticalAlignment="Top"
+            Width="100"
+            SnapsToDevicePixels="True"
+            TextOptions.TextRenderingMode="Aliased"
+            TextOptions.TextFormattingMode="Display"
+            UseLayoutRounding="True">
+
+            <TextBlock.LayoutTransform>
+                <ScaleTransform ScaleX="2.5" ScaleY="2.5"/>
+            </TextBlock.LayoutTransform>
+        </TextBlock>
 
         <!-- Calculator display -->
         <Rectangle HorizontalAlignment="Left" Height="51" Margin="74,97,0,0" Stroke="Black" VerticalAlignment="Top" Width="319" Fill="Black"/>
 
         <TextBlock x:Name="DisplayTextHistory"
-            HorizontalAlignment="Left" 
-            Height="36"
-            Margin="74,97,0,0" 
-            TextWrapping="Wrap"
-            VerticalAlignment="Top"
-            Width="319"
-            FontSize="11"
-            Foreground="LimeGreen"
-            Background="Black"
-            Padding="5"
-            TextAlignment="Right"
-            FontFamily="Press Start 2P"/>
+           HorizontalAlignment="Left"
+           Height="36"
+           Margin="74,97,0,0"
+           TextWrapping="Wrap"
+           VerticalAlignment="Top"
+           Width="160"
+           FontSize="11"
+           Foreground="LimeGreen"
+           Background="Black"
+           Padding="5"
+           TextAlignment="Right"
+           FontFamily="Lucida Console"
+           SnapsToDevicePixels="True"
+           TextOptions.TextRenderingMode="Aliased"
+           TextOptions.TextFormattingMode="Display"
+           UseLayoutRounding="True">
+            <TextBlock.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </TextBlock.LayoutTransform>
+        </TextBlock>
+
 
         <TextBox x:Name="DisplayTextBox"
-             HorizontalAlignment="Left"
-             Height="112"
-             Margin="74,148,0,0"
-             TextWrapping="Wrap"
-             VerticalAlignment="Top"
-             Width="319"
-             FontSize="16"
-             Foreground="LimeGreen"
-             Background="Black"
-             BorderThickness="0"
-             Padding="5"
-             TextAlignment="Right"
-             FontFamily="Press Start 2P"/>
+         HorizontalAlignment="Left"
+         Height="64"
+        Margin="74,149,0,0"
+        TextWrapping="Wrap"
+        VerticalAlignment="Top"
+        Width="128"
+         FontSize="18"
+         Foreground="LimeGreen"
+         Background="Black"
+         BorderThickness="0"
+         Padding="5"
+         TextAlignment="Right"
+         FontFamily="Lucida Console"
+         SnapsToDevicePixels="True"
+         TextOptions.TextRenderingMode="Aliased"
+         TextOptions.TextFormattingMode="Display"
+         UseLayoutRounding="True" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.691"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.188"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+            <TextBox.LayoutTransform>
+                <ScaleTransform ScaleX="2.5" ScaleY="2.5"/>
+            </TextBox.LayoutTransform>
+        </TextBox>
 
         <!-- Calculator number buttons -->
         <Button Content="C" Margin="148,365,0,0" Click="ClearDisplayCurrent"/>
@@ -65,7 +109,12 @@
         <Button Content="+" Margin="343,581,0,0" Click="NumberButtonClick"/>
 
         <!-- Submit button -->
-        <Button Content="Enter" Margin="331,650,0,0" Click="CalculateEquationClick" RenderTransformOrigin="0.5,0.5" Width="75" FontSize="11">
+        <Button Content="Enter" 
+                Margin="331,650,0,0" 
+                Click="CalculateEquationClick" 
+                RenderTransformOrigin="0.5,0.5" 
+                Width="75"
+                FontSize="9">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -77,7 +126,24 @@
         </Button>
 
         <!-- Copy Right Holder -->
-        <TextBlock HorizontalAlignment="Center" Height="30" Margin="0,734,0,0" TextWrapping="Wrap" Text="© 2025 Chreld" FontFamily="Press Start 2P" Foreground="Gray" VerticalAlignment="Top" Width="96"/>
+        <TextBlock HorizontalAlignment="Center"
+           Height="20"
+           Margin="0,720,0,0"
+           TextWrapping="Wrap"
+           Text="© 2025 Chreld"
+           FontFamily="Lucida Console"
+           FontSize="10"
+           Foreground="Gray"
+           VerticalAlignment="Top"
+           Width="40"
+           SnapsToDevicePixels="True"
+           TextOptions.TextRenderingMode="Aliased"
+           TextOptions.TextFormattingMode="Display"
+           UseLayoutRounding="True">
+            <TextBlock.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </TextBlock.LayoutTransform>
+        </TextBlock>
     </Grid>
 
     <!-- Button Styles -->
@@ -85,17 +151,35 @@
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
-
             <Setter Property="Width" Value="50"/>
             <Setter Property="Height" Value="50"/>
-
             <Setter Property="Foreground" Value="LimeGreen"/>
             <Setter Property="Background" Value="DarkSlateGray"/>
-
-            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontSize" Value="10"/>
             <Setter Property="Padding" Value="10"/>
 
-            <Setter Property="FontFamily" Value="Press Start 2P"/>
+            <Setter Property="FontFamily" Value="Lucida Console"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="TextOptions.TextRenderingMode" Value="Aliased"/>
+            <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <Border.LayoutTransform>
+                                <ScaleTransform ScaleX="2.5" ScaleY="2.5"/>
+                            </Border.LayoutTransform>
+                            <ContentPresenter 
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            RecognizesAccessKey="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
 </Window>
