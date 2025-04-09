@@ -16,12 +16,14 @@ namespace MemeCalculator
         private void ClearDisplayCurrent(object sender, RoutedEventArgs e)
         {
             DisplayTextBox.Text = string.Empty;
+            DisplayTextBox.Focus();
         }
 
         private void ClearDisplayEverything(object sender, RoutedEventArgs e)
         {
             DisplayTextBox.Text = string.Empty;
             DisplayTextHistory.Text = string.Empty;
+            DisplayTextBox.Focus();
         }
 
         private void NumberButtonClick(object sender, RoutedEventArgs e)
@@ -29,6 +31,7 @@ namespace MemeCalculator
             if (sender is Button button)
             {
                 DisplayTextBox.Text += button.Content.ToString();
+                DisplayTextBox.Focus();
             }
         }
 

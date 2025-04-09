@@ -62,7 +62,7 @@
          TextWrapping="Wrap"
          VerticalAlignment="Top"
          Width="128"
-         FontSize="18"
+         FontSize="12"
          Foreground="LimeGreen"
          Background="Black"
          BorderThickness="0"
