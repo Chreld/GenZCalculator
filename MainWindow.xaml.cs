@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace MemeCalculator
 {
@@ -33,25 +34,27 @@ namespace MemeCalculator
 
         private void CalculateEquationClick(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button)
+            if (sender is Button || (e is KeyEventArgs keyEventArgs && keyEventArgs.Key == Key.Enter))
             {
                 var userInput = DisplayTextBox.Text;
 
                 CalculateMemeResponse(DisplayTextBox.Text);
 
                 DisplayTextHistory.Text = $"{userInput} = {DisplayTextBox.Text}";
+                DisplayTextBox.Focus();
             }
         }
 
-        private async void TerminateSession()
+        private void TerminateSession()
         {
-            MessageBox.Show("OH WE ARE NOT DESTROYING THE UNIVERSE TODAY, SESSION TERMINATED", "THE HELL YOU DOING?", MessageBoxButton.OK, MessageBoxImage.Warning);
+            MessageBox.Show("OH WE ARE NOT DESTROYING THE UNIVERSE TODAY, SESSION TERMINATED", "THE HELL YOU DOING???", MessageBoxButton.OK, MessageBoxImage.Warning);
             Application.Current.Shutdown();
         }
 
         private void CalculateMemeResponse(string equation)
         {
             string equationTrimmedLowered = Regex.Replace(equation, @"[^a-zA-Z0-9/*+\-(),.]", "").Trim().ToLower();
+            
             switch (equationTrimmedLowered)
             {
                 case "0/0":
@@ -141,13 +144,13 @@ namespace MemeCalculator
                         DisplayTextBox.Text = "Leet";
                         break;
                     case 80085:
-                        DisplayTextBox.Text = "BOOBS";
+                        DisplayTextBox.Text = "Focus on your homework!!!";
                         break;
                     case 8008135:
-                        DisplayTextBox.Text = "BOOBIES";
+                        DisplayTextBox.Text = "Oh you need to focus on your homework";
                         break;
                     default:
-                        DisplayTextBox.Text = result.ToString();
+                        DisplayTextBox.Text = "I need to hear that one more time";
                         break;
                 }
             }
