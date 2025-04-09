@@ -85,14 +85,29 @@ namespace MemeCalculator
                 case "lxix":
                     DisplayTextBox.Text = "Optime, amice ;)";
                     break;
+                case "69+69":
+                    DisplayTextBox.Text = "Double Nice!";
+                    break;
+                case "69+420":
+                    DisplayTextBox.Text = "Nice, blaze it!";
+                    break;
+                case "420+69":
+                    DisplayTextBox.Text = "42069";
+                    break;
                 case "7+(-1/2+5)*20":
                     DisplayTextBox.Text = "Seven-and-a-half-fives. Or 97 if you don't have a potato in your mouth";
                     break;
                 case "77+33":
                     DisplayTextBox.Text = "100";
                     break;
+                case "gay":
+                    DisplayTextBox.Text = "Giiiiirl, shut uppppp";
+                    break;
                 case "fuckyou":
                     DisplayTextBox.Text = "Look at the maidenless, who got beef with a calculator. Touch grass";
+                    break;
+                case "nice":
+                    DisplayTextBox.Text = "69";
                     break;
                 case "shrek":
                     DisplayTextBox.Text = "Shrek is love, Shrek is life";
