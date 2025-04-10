@@ -168,7 +168,7 @@ namespace MemeCalculator
                         DisplayTextBox.Text = "Oh you need to focus on your homework";
                         break;
                     default:
-                        DisplayTextBox.Text = "I need to hear that one more time";
+                        DisplayTextBox.Text = result.ToString();
                         break;
                 }
             }
