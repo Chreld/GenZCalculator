@@ -101,7 +101,7 @@ namespace MemeCalculator
                     DisplayTextBox.Text = "100";
                     break;
                 case "gay":
-                    DisplayTextBox.Text = "Giiiiirl, shut uppppp";
+                    DisplayTextBox.Text = "Giiiiirl, slaaaaay";
                     break;
                 case "fuckyou":
                     DisplayTextBox.Text = "Look at the maidenless, who got beef with a calculator. Touch grass";
