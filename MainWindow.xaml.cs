@@ -100,12 +100,6 @@ namespace MemeCalculator
                 case "77+33":
                     DisplayTextBox.Text = "100";
                     break;
-                case "gay":
-                    DisplayTextBox.Text = "Giiiiirl, slaaaaay";
-                    break;
-                case "fuckyou":
-                    DisplayTextBox.Text = "Look at the maidenless, who got beef with a calculator. Touch grass";
-                    break;
                 case "nice":
                     DisplayTextBox.Text = "69";
                     break;
